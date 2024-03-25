@@ -12,5 +12,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: MatheusSilvaOliveira/tasks-api-test
+          repository: MatheusSilvaOliveira/cypress
           event-type: my-event
