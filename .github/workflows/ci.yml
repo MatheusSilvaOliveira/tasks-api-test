@@ -1,0 +1,16 @@
+name: Tests Run
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  Trigger-Test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Testando Trigger em outro repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: MatheusSilvaOliveira/tasks-api-test
+          event-type: Quero-ver-se-da-certo
